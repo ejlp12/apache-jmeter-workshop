@@ -45,20 +45,23 @@ menggunakan Template.
 
 9. Klik "Graph Result"
    
-   ![](https://cloud.githubusercontent.com/assets/3068071/15265307/1f27e75c-19ab-11e6-8239-7a84f55609e4.png)
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265313/363acb26-19ab-11e6-8ee7-7cd1e2615520.png)
 
-10.Tambahakan elemen baru dengan tipe Listener 
+10. Tambahakan sebuah elemen baru dengan tipe Listener yaitu "View Result Tree" dengan cara...
+    
+    Click kanan pada elemen "JMeter Users" lalu pada pop-up menu pilih Add > Listener > View Result Tree
+    
+    ![](https://cloud.githubusercontent.com/assets/3068071/15265319/75d4550e-19ab-11e6-971f-7fe959af9907.png)
    
-   ![](https://cloud.githubusercontent.com/assets/3068071/15265319/75d4550e-19ab-11e6-971f-7fe959af9907.png)
+    Jika ada warning yang memberitahukan untuk menyimpan project Test Plan, klik OK
+    ![](https://cloud.githubusercontent.com/assets/3068071/15265325/9ba8134c-19ab-11e6-9c53-294282c2be4c.png)
    
-   ![](https://cloud.githubusercontent.com/assets/3068071/15265325/9ba8134c-19ab-11e6-9c53-294282c2be4c.png)
+11. Jalankan Test Plan
    
-11.Jalankan Test Plan
+    ![](https://cloud.githubusercontent.com/assets/3068071/15265322/8a499332-19ab-11e6-8260-f45bb052c83b.png)
    
-   ![](https://cloud.githubusercontent.com/assets/3068071/15265322/8a499332-19ab-11e6-8260-f45bb052c83b.png)
+12. Lihat hasilnya
    
-12.Lihat hasilnya
-   
-   ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
+    ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
    
    ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
