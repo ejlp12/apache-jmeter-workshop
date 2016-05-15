@@ -49,19 +49,27 @@ menggunakan Template.
 
 10. Tambahakan sebuah elemen baru dengan tipe Listener yaitu "View Result Tree" dengan cara...
     
-    Click kanan pada elemen "JMeter Users" lalu pada pop-up menu pilih Add > Listener > View Result Tree
+    Klik kanan pada elemen "JMeter Users" lalu pada pop-up menu pilih Add > Listener > View Result Tree
     
     ![](https://cloud.githubusercontent.com/assets/3068071/15265319/75d4550e-19ab-11e6-971f-7fe959af9907.png)
    
-    Jika ada warning yang memberitahukan untuk menyimpan project Test Plan, klik OK
+    Jika ada warning yang memberitahukan untuk menyimpan project Test Plan, klik tombol [Yes]
+    
     ![](https://cloud.githubusercontent.com/assets/3068071/15265325/9ba8134c-19ab-11e6-9c53-294282c2be4c.png)
    
 11. Jalankan Test Plan
-   
+    
+    Sebelum menjalankan Test Plan, anda sebaiknya berada pada tampilan elemen Listener, klik "View Result Tree"
+    lalu klik tombol [Start] pada Icon Bar diatas, atau klik pada Menu Bar, Run > Start
+    
     ![](https://cloud.githubusercontent.com/assets/3068071/15265322/8a499332-19ab-11e6-8260-f45bb052c83b.png)
+    
+    atau
+    
+    ![image](https://cloud.githubusercontent.com/assets/3068071/15277493/7fff926a-1b30-11e6-8465-ab964b45792d.png)
    
 12. Lihat hasilnya
    
     ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
    
-   ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
+    ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
