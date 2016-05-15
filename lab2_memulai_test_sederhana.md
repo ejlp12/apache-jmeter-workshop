@@ -27,4 +27,38 @@ menggunakan Template.
    
    ![](https://cloud.githubusercontent.com/assets/3068071/15265277/684a3846-19aa-11e6-88f1-2e369506e678.png)
    
+5. Klik "build-web-test-plan"
    
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265283/87ee2acc-19aa-11e6-98f2-49dad4857887.png)
+
+6. Klik "JMeter Users"
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15274900/1b4dd4dc-1ae8-11e6-8590-ab8917841bf1.png)
+
+7. Klik "HTTP Request Default"
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265301/f74af8c8-19aa-11e6-9b1d-97a5898e2a5d.png)
+
+8. Klik "Home Page"
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265307/1f27e75c-19ab-11e6-8239-7a84f55609e4.png)
+
+9. Klik "Graph Result"
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265307/1f27e75c-19ab-11e6-8239-7a84f55609e4.png)
+
+10.Tambahakan elemen baru dengan tipe Listener 
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265319/75d4550e-19ab-11e6-971f-7fe959af9907.png)
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265325/9ba8134c-19ab-11e6-9c53-294282c2be4c.png)
+   
+11.Jalankan Test Plan
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265322/8a499332-19ab-11e6-8260-f45bb052c83b.png)
+   
+12.Lihat hasilnya
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
+   
+   ![](https://cloud.githubusercontent.com/assets/3068071/15265339/f573b26e-19ab-11e6-9a39-54c9db89a191.png)
