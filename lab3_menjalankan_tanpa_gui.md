@@ -99,10 +99,51 @@ Klik tombol [Browse] pada Summary Report window lalu pilih file JMeter log (misa
 
 ![image](https://cloud.githubusercontent.com/assets/3068071/15345814/89ed1448-1cdc-11e6-8be4-e04ab017fa81.png)
 
-Log file akan diload oleh JMeter dan kita bisa lihat report-nya, hal yang sama bisa kita lakukan pada "View Result Tree" report. Pada "View Result Tree" saat kita klik setiap sample request-response, kita hanya bisa melihat Sampler Result tab, sedangkan data detail pada Request dan Response Data tab tidak ada (kosong) karena file jtl tidak menyimpan data dengan lengkap untuk setiap sample request-response HTTP.
+Log file akan diload oleh JMeter dan kita bisa lihat report-nya, hal yang sama bisa kita lakukan pada "View Result Tree" report. 
+
+Pada "View Result Tree" saat kita klik setiap sample request-response, kita hanya bisa melihat Sampler Result tab, sedangkan data detail pada Request dan Response Data tab tidak ada (kosong) karena file jtl tidak menyimpan data dengan lengkap untuk setiap sample request-response HTTP. 
+
+> JMeter secara detail tidak menyimpan semua data hasil test karena akan memberatkan disk I/O saat menulis data tersebut ke log file
 
 
 ![image](https://cloud.githubusercontent.com/assets/3068071/15345872/dcdd65cc-1cdc-11e6-829a-c9951769d40c.png)
+
+Untuk mendapatkan report yang lebih detail, saat menjalankan JMeter kita bisa menambahkan argumen seperti berikut:
+
+```
+-Jjmeter.save.saveservice.output_format=xml 
+-Jjmeter.save.saveservice.samplerData=true 
+-Jjmeter.save.saveservice.response_data=true
+```
+
+Hasilnya adalah sebuah file jtl dengan formal XML dan detail data request dan response
+```
+$ ./jmeter -Jusers=10 -Jjmeter.save.saveservice.output_format=xml -Jjmeter.save.saveservice.samplerData=true -Jjmeter.save.saveservice.response_data=true -n -t /tmp/jmeter/build-web-test-plan.jmx -l /tmp/jmeter/test-result2.jtl
+Creating summariser <summary>
+Created the tree successfully using /tmp/jmeter/build-web-test-plan.jmx
+Starting the test @ Wed May 18 09:52:28 WIB 2016 (1463539948133)
+Waiting for possible shutdown message on port 4445
+summary +      4 in     2s =    2.2/s Avg:   582 Min:   210 Max:  1025 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+summary +     36 in  11.3s =    3.2/s Avg:  1855 Min:   168 Max:  9204 Err:     0 (0.00%) Active: 0 Started: 10 Finished: 10
+summary =     40 in  13.1s =    3.0/s Avg:  1727 Min:   168 Max:  9204 Err:     0 (0.00%)
+Tidying up ...    @ Wed May 18 09:52:41 WIB 2016 (1463539961356)
+... end of run
+```
+
+Sekarang cek file `/tmp/jmeter/test-result2.jtl` hasilnya menjadi file XML
+
+```
+$ head -5 /tmp/jmeter/test-result2.jtl
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="313" lt="284" ts="1463539845156" s="true" lb="Home Page" rc="200" rm="OK" tn="JMeter Users 1-1" dt="text" by="10702" ng="2" na="2">
+  <responseData class="java.lang.String">&lt;!DOCTYPE html SYSTEM &quot;about:legacy-compat&quot;&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-15&quot;&gt;&lt;title&gt;Apache JMeter
+```
+
+Dan jika kita load pada JMeter GUI, kita bisa lihat detail request dan response data-nya.
+
+
 
 
 
