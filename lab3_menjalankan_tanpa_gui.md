@@ -11,7 +11,7 @@ Berinama `build-web-test-plan.jmx` dan simpan di sebuah direktori misalnya `/tmp
 Masuk ke direktori `<JMETER_HOME>/bin`
 
 ```
-$ ./jmeter -n -t /tmp/jmeter/build-web-test-plan.jmx -l test-result.jtl
+$ ./jmeter -n -t /tmp/jmeter/build-web-test-plan.jmx -l /tmp/jmeter/test-result.jtl
 Creating summariser <summary>
 Created the tree successfully using /tmp/jmeter/build-web-test-plan.jmx
 Starting the test @ Wed May 18 09:05:53 WIB 2016 (1463537153243)
@@ -26,7 +26,7 @@ Tidying up ...    @ Wed May 18 09:06:03 WIB 2016 (1463537163408)
 Berikut hasil test tersebut yaitu file `test-result.jtl` yang merupakan file CSV
 
 ```
-$ cat test-result.jtl
+$ cat /tmp/jmeter/test-result.jtl
 1463537154470,1405,Home Page,200,OK,JMeter Users 1-2,text,true,10701,3,3,1007
 1463537154194,1725,Home Page,200,OK,JMeter Users 1-1,text,true,10701,3,3,1288
 1463537155465,963,Home Page,200,OK,JMeter Users 1-3,text,true,10701,3,3,580
@@ -47,18 +47,19 @@ $ cat test-result.jtl
 1463537158589,4133,Changes,200,OK,JMeter Users 1-5,text,true,87663,1,1,3599
 1463537162723,103,Home Page,200,OK,JMeter Users 1-5,text,true,10701,1,1,45
 1463537162827,577,Changes,200,OK,JMeter Users 1-5,text,true,87663,1,1,44
-``
+```
 
 ## Mengubah variabel konfigurasi di Test Plan langsung dari command line
 
+Untuk dapat mengubah suatu variable yang kita set dengan menggunakan GUI dan ditulisa pada file konfigurasi (jmx) maka kita bisa mengisi suatu variable dengan format berikut:
 
 ```
 ${__P(<VARIABLE_NAME>,<DEFAULT_VALUE>)}
 ```
 
-Misal kita set 
+Untuk kemudian kita bisa meng-override pada command line dengan opsti `-J<VARIABLE_NAME>=<VALUE> seperti contoh berikut.
 
-`${__P(users,5)}`
+Misal kita set value dari **Number of Threads (users)** menjadi `${__P(users,5)}`
 
 Seperti di gambar berikut:
 
