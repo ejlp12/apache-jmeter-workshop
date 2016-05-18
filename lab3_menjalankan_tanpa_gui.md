@@ -49,7 +49,7 @@ $ cat /tmp/jmeter/test-result.jtl
 1463537162827,577,Changes,200,OK,JMeter Users 1-5,text,true,87663,1,1,44
 ```
 
-## Mengubah variabel konfigurasi di Test Plan langsung dari command line
+### Mengubah variabel konfigurasi di Test Plan langsung dari command line
 
 Untuk dapat mengubah suatu variable yang kita set dengan menggunakan GUI dan ditulisa pada file konfigurasi (jmx) maka kita bisa mengisi suatu variable dengan format berikut:
 
@@ -88,6 +88,23 @@ summary =    200 in    65s =    3.1/s Avg: 13955 Min:   641 Max: 51908 Err:     
 Tidying up ...    @ Wed May 18 09:19:57 WIB 2016 (1463537997178)
 ... end of run
 ```
+
+### Melihat hasil report (file jtl)
+
+Jalankan JMeter GUI
+
+Tambahkan pada Test Plan, sebuah elemen tipe Listerner misalnya "Summary Result" dan "View Result Tree", sesuai dari report apa yang ingin kita lihat.
+
+Klik tombol [Browse] pada Summary Report window lalu pilih file JMeter log (misalnya `/tmp/jmeter/test-result2.jtl`)
+
+![image](https://cloud.githubusercontent.com/assets/3068071/15345814/89ed1448-1cdc-11e6-8be4-e04ab017fa81.png)
+
+Log file akan diload oleh JMeter dan kita bisa lihat report-nya, hal yang sama bisa kita lakukan pada "View Result Tree" report. Pada "View Result Tree" saat kita klik setiap sample request-response, kita hanya bisa melihat Sampler Result tab, sedangkan data detail pada Request dan Response Data tab tidak ada (kosong) karena file jtl tidak menyimpan data dengan lengkap untuk setiap sample request-response HTTP.
+
+
+![image](https://cloud.githubusercontent.com/assets/3068071/15345872/dcdd65cc-1cdc-11e6-829a-c9951769d40c.png)
+
+
 
 
 
